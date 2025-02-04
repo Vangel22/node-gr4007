@@ -108,10 +108,15 @@ const numbers = [1, 3, 2, 6, 5, 9, 12];
 
 // filter
 const biggerThanTwo = numbers.filter((num) => num > 2);
-console.log("Bigger than two", biggerThanTwo);
+console.log("Bigger than two: ", biggerThanTwo);
 
 // sort
-
+const sortedNumbers = numbers.sort((a, b) => a - b);
+console.log("Ascending order: ", sortedNumbers);
 // reduce
+const sumOfNumbers = numbers.reduce((acc, curr) => (acc += curr), 0);
+console.log("Sum of numbers: ", sumOfNumbers);
 
 // find
+const findNumber = numbers.find((num) => num > 5);
+console.log("Found number: ", findNumber);
