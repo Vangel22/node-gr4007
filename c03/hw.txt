@@ -1,0 +1,5 @@
+Za doma:
+
+1. Local module for file write and read
+2. Use append to append data and then read the new data appended
+3. Read the new data when change has been made -> write, read, append, read

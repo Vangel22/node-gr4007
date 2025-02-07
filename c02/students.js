@@ -65,6 +65,57 @@ console.log(
 
 // 4. Градови подредени по групна висина на просек.
 
+const gradovi = {};
+
+studenti.forEach(({ grad, prosek }) => {
+  // { ime: "Bojan", prosek: 7.5, grad: "Skopje" },
+  // { ime: "Vesna", prosek: 9.2, grad: "Skopje" },
+  // { ime: "Natasha", prosek: 8.1, grad: "Skopje" },
+
+  if (!gradovi[grad]) {
+    // dali gradot postoi vo objektot gradovi
+    gradovi[grad] = { suma: 0, broj: 0 }; // suma i broj na studenti
+    // gradovi["Skopje"] = { suma: 0, broj: 0 } // prv pat koga ke go vidime gradot skopje vo nizata
+  }
+
+  gradovi[grad].suma += prosek;
+  gradovi[grad].broj += 1;
+  // Prva iteracija za grad Skopje
+  // gradovi["Skopje"] = { suma: 7.5, broj: 1 }
+  // gradovi = {
+  //   Skopje: {
+  //     suma: 7.5,
+  //     broj: 1,
+  //   },
+  // };
+
+  // Vtora iteracija za grad Skopje
+  // gradovi["Skopje"] = { suma: 16.7, broj: 2 }
+  // gradovi = {
+  //   Skopje: {
+  //     suma: 16.7,
+  //     broj: 2,
+  //   },
+  // };
+
+  // Vtora iteracija za grad Skopje
+  // gradovi["Skopje"] = { suma: 24.8, broj: 3 }
+  // gradovi = {
+  //   Skopje: {
+  //     suma: 24.8,
+  //     broj: 3,
+  //   },
+  // };
+});
+
+// Object.keys(gradovi) se iminjata na gradovite
+const sumaZaGrad = Object.keys(gradovi).map((grad) => ({
+  grad,
+  prosek: gradovi[grad].suma / gradovi[grad].broj,
+}));
+
+console.log("suma za grad", sumaZaGrad);
+
 // 5. Вкупен просек на студенти чие име завршува на а наспроти сите останати.
 const studentiKoiZavrsuvaatNaA = studenti.filter((st) => st.ime.endsWith("a"));
 
