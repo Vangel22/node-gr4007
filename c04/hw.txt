@@ -1,0 +1,10 @@
+1. Prosirete go kalkulatorot so modulo operacija
+(Bonus: pronajdete i drugi presmetki koi moze da gi vmetnete)
+2. Definirajte gi rutite za konverzija i istite treba da gi istestirate da go dadat rezultatot vo vasiot prebaruvac 
+(Bonus: dodadete plus ruta za nova konverzija)
+
+
+Da se nauci:
+- Rutiranjeto
+- GET baranje
+- POST baranje
