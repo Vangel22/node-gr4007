@@ -16,7 +16,7 @@ const server = http.createServer((req, res) => {
       const emailRegex = /^[a-z0-9.+_-]+\@[a-z]+\.[a-z.]+$/g;
       const passwordRegex =
         /(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@!%$#^&*])[A-Za-z\d@!%$#^&*]{8,}/g;
-      //   const emailRegex = new RegExp("^[a-z0-9.+_-]+@[a-z]+.[a-z.]+$");
+      // const emailRegex = new RegExp("^[a-z0-9.+_-]+@[a-z]+.[a-z.]+$");
       if (
         emailRegex.test(parsedData.email) &&
         passwordRegex.test(parsedData.password)
