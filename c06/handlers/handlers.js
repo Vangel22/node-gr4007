@@ -1,3 +1,7 @@
+const convertMilesToKm = (miles) => {
+  return miles * 1.6;
+};
+
 // Aplikaciski kod
 const handleWelcome = (req, res) => {
   res.send("Welcome to my first Express app!");
@@ -15,10 +19,19 @@ const handleUser = (req, res) => {
   }
 };
 
-const handleNotFound = (req, res) => {};
+const handleNotFound = (req, res) => {
+  res.send("Route not found!");
+};
+
+const handleConvertMilesToKm = (req, res) => {
+  console.log("req.body", req.body);
+  const convertedVal = convertMilesToKm(req.body.miles);
+  res.send(`${req.body.miles} miles are ${convertedVal} km.`);
+};
 
 module.exports = {
   handleWelcome,
   handleUser,
   handleNotFound,
+  handleConvertMilesToKm,
 };
