@@ -11,6 +11,13 @@ const {
 
 const app = express();
 
+// app = {
+//   use: (param) => {
+//     return 0;
+//   }, // middleware
+//   get: (ruta, handler) => {}, // get baranje
+// };
+
 app.use(express.json());
 
 // Middlewares - se pisuvaat prvi vo fajlot kaj logikata, bidejki redosledot e biten za nivno pravilno izvrsuvanje
@@ -56,7 +63,8 @@ app.get("/search", (req, res) => {
   const name = req.query.name;
   const page = req.query.page || 1;
 
-  // http://localhost:3000/search?name=vangel&page=2
+  const firstname = req.query.firstname;
+  // http://localhost:3000/search?name=vangel&page=2&firstname=Ana
 
   res.send(`Пребаруваме за ${name}, страница ${page}`);
 });

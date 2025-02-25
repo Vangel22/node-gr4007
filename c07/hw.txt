@@ -1,0 +1,3 @@
+1. Da napravite data.json koj ke se sostoi od podatoci za biblioteka (title, author, releaseYear), istrazete poveke za strukturiranje na podatocite
+2. Treba da napravite implementacija so v1 od chas 7 bez server. Vo infrastrukturniot kod povikajte gi CRUD funkciite
+3. Treba da napravite implementacija so v2 od chas 7 so server
