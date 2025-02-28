@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Цело име: <%= ime %> <%= prezime %></h3>
+
+    <ul>
+      <% niza.forEach(grad => { %>
+      <li><%= grad %></li>
+      <% })%>
+    </ul>
+
+    <table border="1" width="100%">
+      <tr>
+        <th>Име</th>
+        <th>Презиме</th>
+        <th>Просек</th>
+      </tr>
+      <% studenti.forEach(s => { %>
+      <tr>
+        <th><%= s.ime %></th>
+        <th><%= s.prezime %></th>
+        <th><%= s.prosek %></th>
+      </tr>
+      <% }) %>
+    </table>
+
+    <table border="1" width="100%">
+      <tr>
+        <th>ID</th>
+        <th>Recipe</th>
+        <th>Ingredients</th>
+        <th>Method</th>
+      </tr>
+      <% recepti.forEach(recept => { %>
+      <tr>
+        <th><%= recept.id %></th>
+        <th><%= recept.recipe %></th>
+        <th>
+          <ul>
+            <% for(let ingredient in recept.ingredients) { %>
+            <li><%= ingredient %> : <%= recept.ingredients[ingredient] %></li>
+            <% } %>
+          </ul>
+        </th>
+        <th>
+          <ol>
+            <li><%= recept.method.firstStep %></li>
+            <li><%= recept.method.secondStep %></li>
+            <li><%= recept.method.thirdStep %></li>
+            <li><%= recept.method.forthStep %></li>
+            <li><%= recept.method.fifthStep %></li>
+          </ol>
+        </th>
+      </tr>
+      <% }) %>
+    </table>
+  </body>
+</html>
