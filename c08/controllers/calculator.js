@@ -63,8 +63,6 @@ const parseTemplate = async (template, data = null) => {
         if (err) return reject(err);
 
         if (data) {
-          // {{data}} -> mesto kade mozeme da napravime regex
-
           for (const podatok in data) {
             // d e klicot, klucot se zamenuva taka sto imame match
             // d vo prva iteracija e data
@@ -72,6 +70,7 @@ const parseTemplate = async (template, data = null) => {
             // d vo vtora iteracija e {{ime}}
             // data.data
             // data.ime
+
             console.log("Kluc", podatok);
             console.log("Vrednost", data[podatok]);
 
